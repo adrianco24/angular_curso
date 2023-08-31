@@ -1,0 +1,46 @@
+<h1 class="container bg-dark text-white text-center my-4 py-4">nglf show={{show}}</h1>
+<div>
+  <button class="btn btn-warning mb-3" (click)= "show = !show" >Acción</button>
+  <p class="text-info" *ngIf="show; else showDos">
+    Lorem Ipsum es simplemente el texto de relleno de las 
+    imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen
+  </p>
+  <ng-template #showDos >
+    <p class="text-danger">
+      Lorem Ipsum es simplemente el texto de relleno de las 
+      imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen
+    </p>
+
+  </ng-template>
+
+  
+</div>
+
+
+
+<h1 class="container bg-dark text-white text-center my-4 py-4">[ngClass]</h1>
+
+<div class="container">
+  <button class="btn btn-dark  mb-3" (click)= "activo ='primero'" >Primero</button>
+  <button class="btn btn-danger  mb-3" (click)= "activo ='segundo'">Segundo</button>
+ 
+  <p class="text-info" [ngClass]="{'d-block':activo == 'primero'}" >
+      Lorem Ipsum es simplemente el texto de relleno de las 
+      imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
+      cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y 
+      los mezcló de tal manera que logró hacer un libro de textos especimen
+  </p>
+  
+  <p class= "text-danger d-none" [ngClass]="{'d-block': activo=='segundo'}">
+      Lorem Ipsum es simplemente el texto de relleno de las 
+      imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen
+    </p>
+  
+</div>
+
+
+<app-ngfor>
+
+
+</app-ngfor>
+
