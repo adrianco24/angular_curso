@@ -1,0 +1,74 @@
+1- Primero creo el proyecto  
+ng new App-Empleados
+2- Instalamos boostrap jquery popper
+npm i bootstrap jquery popper.js --save
+3- Luego agregamos lineas al archivo angular.json
+"styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+"scripts": [
+              "node_modules/jquery/dist/jquery.slim.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ]
+4- Como vamos a trabajar con formulario vamos al app.modules.ts e importamos formularios
+
+imports: [
+    BrowserModule,
+    FormsModule
+  ],
+
+5- Creamos una clase Empleados-desde el explorador agregamos un archivo dentro de la carpeta APP
+empleado.module.ts
+
+export class Empleados{
+
+ constructor(nombre:string, apellido:string, cargo:string, salario:number)
+ {
+this.nombre=nombre,
+this.apellido=apellido,
+this.cargo=cargo,
+this.salario=salario
+ }
+
+nombre:string="";
+apellido:string="";
+cargo:string="";
+salario:number=0
+}
+
+6 - Instanciamos la clase en el archivo app.components.ts
+
+export class AppComponent {
+    title = 'Listado de Empleados';
+  
+    empleado:Empleados[]=[
+      new Empleados("Adrian","Correa","Jefe",300000),
+      new Empleados("Javier","Mendoza","Esclavo",10000),
+      new Empleados("Maria","Lopez","Tecnico",25000),
+      new Empleados("Claudia","Gomez","Administrativo",50000),
+    ];
+
+
+
+7- cambiamos el component.html
+
+<div class="container">
+  <div class="row">
+
+    <div class="col" >
+    
+    <div  *ngFor="let empleado of empleados; let i=index">
+      {{i+1}} {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
+    </div>
+
+    </div>
+
+  </div>
+
+
+
+8-leantamos el servidor
+    ng serve -o
