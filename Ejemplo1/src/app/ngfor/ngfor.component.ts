@@ -13,6 +13,5 @@ export class NgforComponent {
     {tipo:'Perro', nombre:'Lisa', edad:10},
     {tipo:'Gato', nombre:'Pepon', edad:2},
     {tipo:'Pato', nombre:'Lucas', edad:5},
-
   ]
 }

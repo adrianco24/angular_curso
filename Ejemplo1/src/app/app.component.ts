@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   show:boolean=true;
   activo:string='';
-  cursos:string[]=['html','ANGULAR','PHP'];
+  
   title = 'Ejemplo1';
 }

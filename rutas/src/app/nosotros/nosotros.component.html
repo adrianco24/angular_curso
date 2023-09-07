@@ -1,6 +1,11 @@
 <div class="mt-5">
     <h2>Nosotros</h2>
     <p>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final</p>
-
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of equipo; index as i">
+        <h6>Nombre: {{item.nombre}}</h6>
+        <h6>Habilidades: {{item.especialidad}}</h6>
+        <a [routerLink]="['/equipo', i]">leer mas..</a>
+        </li>
+    </ul>
 </div>
-

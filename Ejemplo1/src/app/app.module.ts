@@ -6,6 +6,7 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgformioComponent } from './ngformio/ngformio.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgformioComponent } from './ngformio/ngformio.component';
     NgformioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
